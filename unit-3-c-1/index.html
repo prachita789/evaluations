@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box{
+        text-align: center;
+        margin-top: 15px;
+      }
+      #type,#price,#desc,#image{
+        width: 35%;
+        height: 25px;
+        margin-top: 25px;
+
+      }
+      #add_product{
+        height: 30px;
+        width: 15%;
+        margin-top: 15px;
+        font-weight: 600;
+        background-color:#f84164 ;
+        border: none;
+
+      }
+      #show_products{
+        cursor: pointer;
+        width: 10%;
+        height:30px;
+        font-size: medium;
+        font-weight: 600;
+        background-color:#f84164 ;
+        border: none;
+        
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      <a href ="inventory.html"><button id="show_products">Show Products</button></a>
+    </div>
+    <div id="box">
+      <h2>Add Products</h2>
+      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+
+      <!--Create four inputs to accept Type, Description, price, & image-->
+      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+      <form id="products" onsubmit="productData(event)" >
+        <input type="text" id="type" placeholder="Product Type"><br>
+        <input type="text" id="desc" placeholder="Product Description"><br>
+        <input type="text" id="price" placeholder="Product Price"><br>
+        <input type="url" id="image" placeholder="Product Image"><br>
+        <button id="add_product">Add Product</button>
+
+
+      </form>
+      
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>
