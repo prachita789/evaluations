@@ -1,0 +1,14 @@
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    gap:15px;
+
+
+}
+#menu{
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+
+}
