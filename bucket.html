@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #bucket{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        grid-gap:35px;
+      }
+      image{
+        height: 100px;
+        width: 20%;
+      }
+    </style>
   </head>
 
   <style></style>
 
   <body>
     <div id="total-div">
-      <h3 id="">
+      <h3 id="total-amount">
         <!--Show bucket total here, do not add anything only Total value. Not even "Total - 1200Rs" but like this "1200" -->
       </h3>
     </div>

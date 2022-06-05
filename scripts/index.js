@@ -6,8 +6,8 @@ async function productData(){
         let res = await fetch(url);
 
         let data = await res.json();
-        appendData(data);
-        console.log(data)
+        appendData(data.menu);
+        console.log(data.menu)
     }catch (err){
         console.log(err);
     }
@@ -28,6 +28,8 @@ function appendData(data){
 
         let image = document.createElement("img");
         image.src = ele.image;
+        image.style.width = '300px';
+        image.style.height = '50%';
 
         let title = document.createElement("p");
         title.innerText = ele.title;

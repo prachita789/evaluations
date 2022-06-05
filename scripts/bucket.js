@@ -1,15 +1,18 @@
 // On clicking remove button the item should be removed from DOM as well as localstorage.
 
 let list= JSON.parse(localStorage.getItem("coffee")) || [];
-console.log(data);
+console.log(list);
 
 
-let price = 0;
 list.map(function(ele,index){
+    
+
     let div2 = document.createElement("div")
 
-    let img = document.createElement("img")
-    img.src = ele.img;
+    let image = document.createElement("img")
+    image.src = ele.image;
+    image.style.width = '300px';
+    image.style.height = '50%';
 
     let title = document.createElement("p")
     title.innerText = ele.title;
@@ -24,15 +27,16 @@ list.map(function(ele,index){
     btn1.addEventListener("click",function(){
         removecoffee(ele,index)
     })
-    div2.append(img,title,price,btn1)
+    div2.append(image,title,price,btn1)
 
     let box1=document.getElementById("bucket")
     box1.append(div2);
-
-    price = price + Number(ele.price); 
-    console.log(price);
+    
+    let totalprice = 0;
+    totalprice = totalprice + Number(ele.totalprice); 
+    console.log(totalprice);
 })
-
+document.getElementById("#total_amount").append(totalprice);
 
 function removecoffee(index){
     list.splice(index,1)
